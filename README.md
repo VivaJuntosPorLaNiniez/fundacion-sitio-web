@@ -1,4 +1,4 @@
-# [Página Web de Viva Juntos Por La Niñez]
+# Página Web de Viva Juntos Por La Niñez
 
 Este proyecto consiste en el desarrollo de una plataforma web moderna para la presentación, gestión y recepción de donaciones para la Fundación Viva Juntos Por La Niñez, realizada como parte de la pasantía de estudiantes de la Universidad Don Bosco (UDB).
 
@@ -32,7 +32,7 @@ Para ejecutar este proyecto localmente, necesitarás tener instalado:
 
 1.  **Clonar el repositorio:**
     ```bash
-    git clone [https://github.com/VivaJuntosPorLaNiniez/fundacion-sitio-web.git]
+    git clone https://github.com/VivaJuntosPorLaNiniez/fundacion-sitio-web.git
     ```
 2.  **Instalar dependencias:**
     ```bash
