@@ -1,26 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
+@plugin "daisyui";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* theme colors */
+/* amarillo: #f5ec3f */
+/* azul: #2c439c */
+/* verde: #82c341 */
+/* rojo: #ee2e2b */
+/* morado: #a3509e */
+/* rosa: #e13d96 */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+html, body {
+  background-color: #f2f1ec;
+  color: #000000;
+  font-family: 'Poppins', sans-serif;
 }

@@ -8,7 +8,9 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      poppins: "'Poppins', sans-serif",
+    },
   },
-    plugins: [daisyui],
+  plugins: [daisyui],
 };
