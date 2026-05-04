@@ -1,4 +1,7 @@
 import Slider from "@/components/Slider";
+import MapaSalvador from "@/components/MapaSalvador";
+import CarouselProyectos from "@/components/CarouselProyectos";
+
 export default function Home() {
   return (
     <main>
@@ -59,7 +62,7 @@ export default function Home() {
       <br></br> {/*Fin de la sección de tarjetas quienes somos*/}
 
       {/*inicio de sección de cartas de contadores de impacto...." */}
-      <h1 className="tema">Total de beneficiados.</h1>
+      <h1 className="tema">Total de beneficiados</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-auto max-w-full">
         <div className="card bg-base-100 shadow-sm w-full">
           <figure className="px-4 pt-4">
@@ -112,6 +115,29 @@ export default function Home() {
         </div>
       </div>
       {/*Fin de la sección de cartas de contadores de impacto...." */}
+
+      {/*Importar Carrusel para proyectos destacados */}
+      <CarouselProyectos />
+      {/*Importar cartas carrusel para proyectos destacados */}
+
+      {/* Sección del Mapa de El Salvador */}
+      <div className="px-4 sm:px-10 md:px-10 lg:px-20 my-10">
+        <h1 className="tema">Cobertura en El Salvador</h1>
+        <MapaSalvador />
+      </div>
+
+      {/* Inicio de Sección de aliados */}
+      <div className="px-4 sm:px-5 md:px-5 lg:px-10 my-10">
+        <h1 className="tema">Nuestros Aliados</h1>
+        <div className="flex flex-wrap items-center justify-center gap-6">
+          <img src="/logo1.png" alt="Logo aliado 1" className="h-16 w-auto object-contain" />
+          <img src="/logo2.jpg" alt="Logo aliado 2" className="h-16 w-auto object-contain" />
+          <img src="/logo3.png" alt="Logo aliado 3" className="h-16 w-auto object-contain" />
+        </div>
+      </div>
+
+      {/* Fin de Sección de aliados */}
+
     </main>
   );
 }
