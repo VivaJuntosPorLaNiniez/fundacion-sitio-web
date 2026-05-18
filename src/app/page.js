@@ -130,9 +130,9 @@ export default function Home() {
       <div className="px-4 sm:px-5 md:px-5 lg:px-10 my-10">
         <h1 className="tema">Nuestros Aliados</h1>
         <div className="flex flex-wrap items-center justify-center gap-6">
-          <img src="/logo1.png" alt="Logo aliado 1" className="h-16 w-auto object-contain" />
-          <img src="/logo2.jpg" alt="Logo aliado 2" className="h-16 w-auto object-contain" />
-          <img src="/logo3.png" alt="Logo aliado 3" className="h-16 w-auto object-contain" />
+          <img src="/logo1.png" alt="Logo de Centro Psicopedagógico: Pasitos" className="h-16 w-auto object-contain" />
+          <img src="/logo2.png" alt="Logo de Fundación de Red de Sobrevivientes y Personas con Discapacidad El Salvador" className="h-16 w-auto object-contain" />
+          <img src="/logo3.png" alt="Logo de Glasswing International" className="h-16 w-auto object-contain" />
         </div>
       </div>
 
