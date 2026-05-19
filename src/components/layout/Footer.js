@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
         <>
-            <footer className="footer sm:footer-horizontal bg-[#2c439c] text-white p-10">
+            <footer className="footer sm:footer-horizontal bg-[#b5bbd4] text-black p-10">
                 <nav>
                     <h6 className="footer-title">Contacto</h6>
                     <a className="link link-hover" href="https://maps.app.goo.gl/yyUon3DspkJTiHhj6" target="_blank" rel="noopener noreferrer"><b>Ubicación:</b> Residencial San Luis calle Bernal Bis casa #37-A, 
@@ -19,8 +19,8 @@ export default function Footer() {
                 </nav>
                 <nav>
                     <h6 className="footer-title">Legal</h6>
-                    <a className="link link-hover" href="/terminos-y-condiciones">Términos y condiciones</a>
-                    <a className="link link-hover" href="/politica-de-privacidad">Política de privacidad</a>
+                    <a className="link link-hover" href="/legal/terminos-y-condiciones">Términos y condiciones</a>
+                    <a className="link link-hover" href="/legal/politica-de-privacidad">Política de privacidad</a>
                 </nav>
                 <nav>
                     <h6 className="footer-title">Síguenos</h6>
@@ -62,7 +62,7 @@ export default function Footer() {
                                         </div>
                     </nav>
                 </footer>
-                <footer className="footer bg-[#f5ec3f] border-base-300 px-10 py-4">
+                <footer className="footer bg-[#b5bbd4] px-10 py-4">
                 <aside className="grid-flow-col items-center">
                     <img 
                     src="/logoviva.png" 

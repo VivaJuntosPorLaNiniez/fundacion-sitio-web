@@ -7,10 +7,10 @@ export default function Slider() {
 
   // Array de imágenes del slider
   const slides = [
-    '/baner1.png',
-    '/baner2.png',
-    '/baner3.png',
-    '/baner4.png',
+    '/slider/baner1.png',
+    '/slider/baner2.png',
+    '/slider/baner3.png',
+    '/slider/baner4.png',
   ];
 
   // Auto-cambiar imagen cada 5 segundos

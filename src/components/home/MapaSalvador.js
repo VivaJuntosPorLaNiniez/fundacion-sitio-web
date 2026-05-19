@@ -3,6 +3,7 @@ import { useState } from "react";
 
 export default function MapaSalvador() {
   const [hoveredDept, setHoveredDept] = useState(null); // Clasificación de departamentos según tu requerimiento
+  const handleInteraction = (name) => {setHoveredDept(name);} //controla el estado del departamento activo en mobile
 
   const cobertura = {
     alta: [
@@ -98,8 +99,12 @@ export default function MapaSalvador() {
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row items-center gap-8 p-8 bg-base-100 rounded-box shadow-2xl">
-            {/* Contenedor del Mapa */}
+    <div className="w-full">
+      <div className="w-full bg-[#2c439c] px-8 py-4 shadow-md rounded-t-box">
+        <h1 className="text-center text-3xl font-bold text-white">Cobertura en El Salvador</h1>
+      </div>
+    <div className="flex flex-col lg:flex-row items-center gap-8 p-8 bg-white rounded-b-2xl shadow-2xl">
+      {/* Contenedor del Mapa */}
       <div className="bg-blue-50 p-6 rounded-3xl w-full lg:w-2/3 shadow-inner">
         <svg
           viewBox="0 0 1000 547"
@@ -107,14 +112,20 @@ export default function MapaSalvador() {
           xmlns="http://www.w3.org/2000/svg"
         >
           <g id="features">
-                       {" "}
+            {" "}
             {departamentos.map((dept) => (
               <path
                 key={dept.id}
-                d={dept.d}
+                d={dept.d}       
+                //eventos para hover y touch en pc         
                 onMouseEnter={() => setHoveredDept(dept.name)}
-                onMouseLeave={() => setHoveredDept(null)}
-                className={`
+                onMouseLeave={() => setHoveredDept(null)}    
+                // Para dispositivos táctiles, usamos onTouchStart para simular el hover           
+                onTouchStart={(e) => {
+                   e.preventDefault(); 
+                  handleInteraction(dept.name);
+                }}
+    className={`
      transition-all duration-300 cursor-pointer stroke-white stroke-[1px]
     ${getDeptColor(dept.name)}
      hover:brightness-110 hover:scale-[1.01] hover:stroke-2
@@ -126,39 +137,40 @@ export default function MapaSalvador() {
       </div>
       {/* Leyenda y Status */}
       <div className="w-full lg:w-1/3 space-y-8">
-        <div className="bg-base-200 p-6 rounded-2xl border border-base-300">
+        <div className="bg-blue-100 p-6 rounded-2xl border border-white shadow-lg">
           <h2 className="text-2xl font-black text-primary mb-6">Cobertura</h2>
           <div className="space-y-4">
             <div className="flex items-center gap-4">
               <div className="w-8 h-8 rounded-lg bg-success shadow-sm"></div>
-              <span className="font-bold text-base-content">
+              <span className="font-bold text-black">
                 Alta 
               </span>
             </div>
             <div className="flex items-center gap-4">
               <div className="w-8 h-8 rounded-lg bg-warning shadow-sm"></div>
-              <span className="font-bold text-base-content">
+              <span className="font-bold text-black">
                 Media 
               </span>
             </div>
             <div className="flex items-center gap-4">
               <div className="w-8 h-8 rounded-lg bg-error shadow-sm"></div>
-              <span className="font-bold text-base-content">
+              <span className="font-bold text-black">
                 Baja 
               </span>
             </div>
           </div>
           <div className="divider my-8"></div>{" "}
           <div className="space-y-1 flex flex-col items-center text-center">
-            <p className="text-xs font-bold text-slate-400 tracking-widest uppercase">
+            <p className="text-xs font-bold text-black tracking-widest uppercase">
               Viendo:
             </p>
-            <p className="text-xl font-black text-secondary min-h-[40px] animate-in fade-in slide-in-from-left-2 duration-300">
+            <p className="text-xl font-black text-secondary min-h-10 animate-in fade-in slide-in-from-left-2 duration-300">
               {hoveredDept || "El Salvador"}
             </p>
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

@@ -1,6 +1,8 @@
-import Slider from "@/components/Slider";
-import MapaSalvador from "@/components/MapaSalvador";
-import CarouselProyectos from "@/components/CarouselProyectos";
+import Slider from "@/components/home/Slider";
+import MapaSalvador from "@/components/home/MapaSalvador";
+import CarouselProyectos from "@/components/home/CarouselProyectos";
+import MarcoArriba from "@/components/ui/MarcoArriba";
+import MarcoAbajo from "@/components/ui/MarcoAbajo";
 
 export default function Home() {
   return (
@@ -8,40 +10,40 @@ export default function Home() {
       <a href="https://www.flaticon.es/iconos-gratis/dia-de-los-ninos" title="día de los niños iconos" className="hidden">Día de los niños iconos creados por Iconfromus - Flaticon</a>
       {/* Slider automático con 4 imágenes */}
       <Slider />
+      <MarcoArriba />
       <div className="px-4 sm:px-10 md:px-10 lg:px-20 ">
         <br></br>
-        {/*inicio de sección de tarjetas "¿Quiénes somos?" */}
+        {/*inicio de sección de tarjetas*/}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-4 mx-auto max-w-full">
-          {/* ===== CARTA 1: ¿Quiénes somos? (INICIO) ===== */}
-          <div className="card bg-white shadow-md overflow-hidden flex flex-row items-center">
-            <figure className="w-48 h-48 md:w-56 md:h-56 shrink-0 flex items-center justify-center px-5 py-8 bg-gray-50">
+          {/* ===== CARTA 1: Historia (INICIO) ===== */}
+          <div className="card bg-white shadow-md overflow-hidden flex flex-col sm:flex-row items-center">
+            <figure className="w-48 h-48 md:w-56 md:h-56 shrink-0 flex items-center justify-center px-5 py-8 bg-transparent">
               <img
-                src="/quien.jpg"
-                alt="¿Quiénes somos?"
-                className="w-40 h-40 md:w-48 md:h-48 object-cover rounded-lg"
+                src="/home/histo.png"
+                alt="historia"
+                className="max-w-full max-h-full object-contain"
               />
             </figure>
             <div className="card-body p-4 md:p-5">
-              <h2 className="card-title text-2xl">¿Quiénes somos?</h2>
+              <h2 className="card-title text-2xl">Nuestra Historia</h2>
               <p className="text-lg">
-                Somos una ONG, orientada hacia un enfoque de derechos de la
-                niñez, para contribuir al bienestar y desarrollo integral de
-                niñas, niños, adolescentes y sus familias.
+                Viva por la niñez El Salvador forma parte de una red internacional llamada Red Viva; dicha red fue 
+fundada en 1996 por Patrick McDonald.
               </p>
               <div className="card-actions justify-end mt-8">
-                <button className="btn btn-primary btn-lg">Leer más</button>
+                <button className="btn bg-[#2c439c] text-white btn-lg">Leer más</button>
               </div>
             </div>
           </div>
-          {/* ===== CARTA 1: ¿Quiénes somos? (FIN) ===== */}
+          {/* ===== CARTA 1: Historia (FIN) ===== */}
 
           {/* ===== CARTA 2: ¿Quiénes somos? (INICIO) ===== */}
-          <div className="card bg-white shadow-md overflow-hidden flex flex-row items-center">
-            <figure className="w-48 h-48 md:w-56 md:h-56 shrink-0 flex items-center justify-center px-5 py-8 bg-gray-50">
+          <div className="card bg-white shadow-md overflow-hidden flex flex-col sm:flex-row items-center">
+            <figure className="w-48 h-48 md:w-56 md:h-56 shrink-0 flex items-center justify-center px-5 py-8 bg-transparent">
               <img
-                src="/quien.jpg"
+                src="/home/ninoos.png"
                 alt="¿Quiénes somos?"
-                className="w-40 h-40 md:w-48 md:h-48 object-cover rounded-lg"
+                className="max-w-full max-h-full object-contain"
               />
             </figure>
             <div className="card-body p-4 md:p-8">
@@ -52,7 +54,7 @@ export default function Home() {
                 niñas, niños, adolescentes y sus familias.
               </p>
               <div className="card-actions justify-end mt-8">
-                <button className="btn btn-primary btn-lg">Leer más</button>
+                <button className="btn bg-[#2c439c] text-white btn-lg">Leer más</button>
               </div>
             </div>
           </div>
@@ -62,55 +64,33 @@ export default function Home() {
       <br></br> {/*Fin de la sección de tarjetas quienes somos*/}
 
       {/*inicio de sección de cartas de contadores de impacto...." */}
-      <h1 className="tema">Total de beneficiados</h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-auto max-w-full">
-        <div className="card bg-base-100 shadow-sm w-full">
-          <figure className="px-4 pt-4">
-            <img
-              src="/ninos.png"
-              alt="Contador de impacto 1"
-              className="rounded-xl w-20 h-20 object-cover"
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title ml-29" >Niñas y Niños</h2>
-            <p className="carta-contador">185</p>
-            <div className="card-actions justify-end">
+      <div className="w-full mb-10 py-8 px-4 sm:px-10 md:px-10 lg:px-20">
+        <div className="stats stats-vertical lg:stats-horizontal w-full shadow-md overflow-hidden rounded-none">
+          <div className="stat min-h-55 w-full bg-[#f5ec3f] text-black">
+            <div className="stat-figure text-black">
+              <img src="/home/ninos.png" alt="Niñas y Niños" className="h-20 w-20 object-contain" />
             </div>
+            <div className="stat-title text-xl font-semibold text-black">Niñas y Niños</div>
+            <div className="stat-value text-5xl font-bold text-black">185</div>
+            <div className="stat-desc text-base text-black">Total de beneficiados</div>
           </div>
-        </div>
 
-        <div className="card bg-base-100 shadow-sm w-full">
-          <figure className="px-4 pt-4">
-            <img
-              src="/familia.png"
-              alt="Contador de impacto 1"
-              className="rounded-xl w-20 h-20 object-cover"
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title ml-25">Madres y Padres</h2>
-            <p  className="carta-contador">91</p>
-            <div className="card-actions justify-end">
-             </div>
+          <div className="stat min-h-55 w-full bg-[#82c341] text-black">
+            <div className="stat-figure text-black">
+              <img src="/home/familia.png" alt="Madres y Padres" className="h-20 w-20 object-contain" />
+            </div>
+            <div className="stat-title text-xl font-semibold text-black">Madres y Padres</div>
+            <div className="stat-value text-5xl font-bold text-black">91</div>
+            <div className="stat-desc text-base text-black">Total de beneficiados</div>
           </div>
-        </div>
 
-        <div className="card bg-base-100 shadow-sm w-full">
-          <figure className="px-4 pt-4">
-            <img
-              src="/lideres.png"
-              alt="Contador de impacto 1"
-              className="rounded-xl w-20 h-20 object-cover"
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title ml-20">Cuidadores y Lideres</h2>
-            <p className="carta-contador">
-              51
-            </p>
-            <div className="card-actions justify-end">
-           </div>
+          <div className="stat min-h-55 w-full bg-[#e13d96] text-black">
+            <div className="stat-figure text-black">
+              <img src="/home/lideres.png" alt="Cuidadores y Lideres" className="h-20 w-20 object-contain" />
+            </div>
+            <div className="stat-title text-xl font-semibold text-black">Cuidadores y Lideres</div>
+            <div className="stat-value text-5xl font-bold text-black">51</div>
+            <div className="stat-desc text-base text-black">Total de beneficiados</div>
           </div>
         </div>
       </div>
@@ -118,26 +98,47 @@ export default function Home() {
 
       {/*Importar Carrusel para proyectos destacados */}
       <CarouselProyectos />
+      
       {/*Importar cartas carrusel para proyectos destacados */}
 
       {/* Sección del Mapa de El Salvador */}
-      <div className="px-4 sm:px-10 md:px-10 lg:px-20 my-10">
-        <h1 className="tema">Cobertura en El Salvador</h1>
-        <MapaSalvador />
+      <div className="px-4 sm:px-10 md:px-10 lg:px-20 mb-20 mt-20">
+        <MapaSalvador/>
       </div>
+
+      <MarcoAbajo />
 
       {/* Inicio de Sección de aliados */}
-      <div className="px-4 sm:px-5 md:px-5 lg:px-10 my-10">
-        <h1 className="tema">Nuestros Aliados</h1>
-        <div className="flex flex-wrap items-center justify-center gap-6">
-          <img src="/logo1.png" alt="Logo de Centro Psicopedagógico: Pasitos" className="h-16 w-auto object-contain" />
-          <img src="/logo2.png" alt="Logo de Fundación de Red de Sobrevivientes y Personas con Discapacidad El Salvador" className="h-16 w-auto object-contain" />
-          <img src="/logo3.png" alt="Logo de Glasswing International" className="h-16 w-auto object-contain" />
+      <section className="mt-10 mb-1 w-full py-4 sm:py-6">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-8 xl:px-10">
+          <div className="mb-6 text-center">
+            <h1 className="tema card-title justify-center text-[#2c439c]">Nuestros Aliados</h1>
+          </div>
+
+          <div className="grid w-full grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 my-10">
+            <div className="flex items-center justify-center">
+              <img src="/aliados/logo1.png" alt="Logo aliado 1" className="h-16 w-auto object-contain sm:h-20" />
+            </div>
+            <div className="flex items-center justify-center">
+              <img src="/aliados/logo2.png" alt="Logo aliado 2" className="h-20 w-auto object-contain sm:h-35" />
+            </div>
+            <div className="flex items-center justify-center">
+              <img src="/aliados/logo3.png" alt="Logo aliado 3" className="h-20 w-auto object-contain sm:h-48" />
+            </div>
+            <div className="flex items-center justify-center">
+              <img src="/aliados/logo4.png" alt="Logo aliado 4" className="h-16 w-auto object-contain sm:h-20" />
+            </div>
+            <div className="flex items-center justify-center">
+              <img src="/aliados/logo5.png" alt="Logo aliado 5" className="h-16 w-auto object-contain sm:h-42" />
+            </div>
+            <div className="flex items-center justify-center">
+              <img src="/aliados/logo6.png" alt="Logo aliado 6" className="h-16 w-auto object-contain sm:h-37" />
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* Fin de Sección de aliados */}
-
     </main>
   );
 }
