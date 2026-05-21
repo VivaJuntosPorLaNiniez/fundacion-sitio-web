@@ -7,29 +7,29 @@ import { useRouter } from 'next/navigation';
 const slides = [
   {
     code: 'Proyecto 01',
-    title: 'Desarrollo Social',
+    title: 'dsffssdf',
     description:
       'Programas orientados a fortalecer comunidad, acompañamiento y oportunidades reales para las familias.',
     img: '/proyecto1.jpg',
-    link: '/programas-y-proyectos/desarrollo-social',
+    link: '/programas-y-proyectos/',
     button: 'Ver proyecto',
   },
   {
     code: 'Proyecto 02',
-    title: 'Desarrollo Económico',
+    title: 'gjhgjhgjhgj',
     description:
       'Acciones para impulsar capacidades productivas, empleo y crecimiento local sostenible.',
     img: '/proyecto2.jpg',
-    link: '/programas-y-proyectos/desarrollo-economico',
+    link: '/programas-y-proyectos/',
     button: 'Ver proyecto',
   },
   {
     code: 'Proyecto 03',
-    title: 'Otros Proyectos',
+    title: 'hgjhgjhgjhghj',
     description:
       'Iniciativas complementarias que amplían el impacto de la fundación en distintos frentes.',
     img: '/proyecto3.jpg',
-    link: '/programas-y-proyectos/otros-proyectos',
+    link: '/programas-y-proyectos/',
     button: 'Ver proyecto',
   },
 ];
@@ -109,7 +109,7 @@ export default function CarouselProyectos() {
             <div className="blog-slider__pagination" aria-label="Paginación del carrusel">
               {slides.map((slide, index) => (
                 <button
-                  key={slide.link}
+                  key={`${slide.link}-${index}`}
                   type="button"
                   onClick={() => setActiveIndex(index)}
                   aria-label={`Ir a ${slide.title}`}

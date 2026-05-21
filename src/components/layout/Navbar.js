@@ -10,14 +10,6 @@ const primarySections = [
             { label: "Sobre nosotros", href: "/quienes-somos/sobre-nosotros" },
         ],
     },
-    {
-        label: "Programas y proyectos",
-        items: [
-            { label: "Desarrollo social", href: "/programas-y-proyectos/desarrollo-social" },
-            { label: "Desarrollo económico", href: "/programas-y-proyectos/desarrollo-economico" },
-            { label: "Otros proyectos", href: "/programas-y-proyectos/otros-proyectos" },
-        ],
-    },
 ];
 
 const dropdownPanelClass =
@@ -28,8 +20,8 @@ const menuItemClass =
 
 export default function Navbar() {
     return (
-        <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-4 lg:px-6">
-            <div className="overflow-visible rounded-b-[1.75rem] border border-white/70 bg-white/80 shadow-[0_20px_60px_rgba(15,23,42,0.12)] backdrop-blur-xl">
+        <header className="fixed inset-x-0 top-0 z-50 w-full">
+            <div className="overflow-visible border-b border-white/70 bg-white/80 shadow-[0_20px_60px_rgba(15,23,42,0.12)] backdrop-blur-xl">
                 <div className="h-1 w-full bg-linear-to-r from-[#2c439c] via-[#82c341] to-[#ee2e2b]" />
                 <div className="navbar min-h-19 px-4 sm:px-6 lg:px-8">
                     <div className="navbar-start gap-3">
@@ -59,20 +51,9 @@ export default function Navbar() {
                                     </details>
                                 </li>
                                 <li>
-                                    <details>
-                                        <summary className="rounded-2xl px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-[#f5ec3f] hover:text-slate-950">
-                                            Programas y proyectos
-                                        </summary>
-                                        <ul className="mt-2 space-y-1 pl-2">
-                                            {primarySections[1].items.map((item) => (
-                                                <li key={item.href}>
-                                                    <Link className={menuItemClass} href={item.href}>
-                                                        {item.label}
-                                                    </Link>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </details>
+                                    <Link className={menuItemClass} href="/programas-y-proyectos">
+                                        Programas y proyectos
+                                    </Link>
                                 </li>
                                 <li>
                                     <Link className={menuItemClass} href="/transparencia">
@@ -136,6 +117,14 @@ export default function Navbar() {
                                     </div>
                                 </li>
                             ))}
+                            <li>
+                                <Link
+                                    className="inline-flex items-center rounded-full px-4 py-2.5 text-[0.95rem] font-semibold text-slate-800 transition duration-200 hover:bg-[#f5ec3f] hover:text-slate-950"
+                                    href="/programas-y-proyectos"
+                                >
+                                    Programas y proyectos
+                                </Link>
+                            </li>
                             <li>
                                 <Link
                                     className="inline-flex items-center rounded-full px-4 py-2.5 text-[0.95rem] font-semibold text-slate-800 transition duration-200 hover:bg-[#f5ec3f] hover:text-slate-950"
