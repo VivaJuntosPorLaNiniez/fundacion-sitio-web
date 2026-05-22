@@ -38,7 +38,7 @@ p.carta-contador {
   width: 100%;
   background-color: transparent;
   overflow: hidden;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 8px;
 }
 
@@ -165,20 +165,19 @@ p.carta-contador {
         .blog-slider__item {
           display: grid;
           grid-template-columns: minmax(240px, 0.95fr) minmax(260px, 1.05fr);
-          align-items: center;
+          align-items: stretch;
           gap: 28px;
           min-height: 410px;
         }
 
         .blog-slider__img {
           position: relative;
-          /* show raw photo only: remove decorations */
-          border-radius: 0 !important;
-          overflow: visible !important;
-          min-height: 0 !important;
-          box-shadow: none !important;
-          transform: translateX(-72px); /* keep horizontal offset if desired */
-          background: none !important;
+          border-radius: 24px;
+          overflow: hidden;
+          min-height: 100%;
+          box-shadow: 0 18px 40px rgba(15, 23, 42, 0.14);
+          transform: none;
+          background: #f1f5f9;
         }
 
         .blog-slider__img::after {
@@ -189,11 +188,12 @@ p.carta-contador {
         .blog-slider__img img {
           display: block;
           width: 100%;
-          height: auto;
+          height: 100%;
           object-fit: cover;
-          border-radius: 0 !important;
-          transform: none !important;
-          transition: none !important;
+          object-position: center;
+          border-radius: 24px;
+          transform: none;
+          transition: none;
         }
 
         .blog-slider:hover .blog-slider__img img {

@@ -1,4 +1,5 @@
 import Slider from "@/components/home/Slider";
+import Link from "next/link";
 import MapaSalvador from "@/components/home/MapaSalvador";
 import CarouselProyectos from "@/components/home/CarouselProyectos";
 import MarcoArriba from "@/components/ui/MarcoArriba";
@@ -32,10 +33,11 @@ export default function Home() {
 fundada en 1996 por Patrick McDonald.
               </p>
               <div className="card-actions justify-end mt-8">
-                <button className="btn rounded-full border-0 bg-[#2c439c] pl-5 pr-6 text-white shadow-[0_10px_24px_rgba(44,67,156,0.22)] transition-transform duration-200 hover:-translate-y-0.5 hover:bg-[#243984] btn-lg">
+                <Link className="btn rounded-full border-0 bg-[#2c439c] pl-5 pr-6 text-white shadow-[0_10px_24px_rgba(44,67,156,0.22)] transition-transform duration-200 hover:-translate-y-0.5 hover:bg-[#243984] btn-lg"
+                href="/quienes-somos/historia">
                   <ChevronRight className="h-4 w-4" aria-hidden="true" />
                   Leer más
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -58,10 +60,11 @@ fundada en 1996 por Patrick McDonald.
                 niñas, niños, adolescentes y sus familias.
               </p>
               <div className="card-actions justify-end mt-8">
-                <button className="btn rounded-full border-0 bg-[#2c439c] pl-5 pr-6 text-white shadow-[0_10px_24px_rgba(44,67,156,0.22)] transition-transform duration-200 hover:-translate-y-0.5 hover:bg-[#243984] btn-lg">
+                <Link className="btn rounded-full border-0 bg-[#2c439c] pl-5 pr-6 text-white shadow-[0_10px_24px_rgba(44,67,156,0.22)] transition-transform duration-200 hover:-translate-y-0.5 hover:bg-[#243984] btn-lg"
+                href='/quienes-somos/sobre-nosotros'>
                   <ChevronRight className="h-4 w-4" aria-hidden="true" />
                   Leer más
-                </button>
+                </Link>
               </div>
             </div>
           </div>
