@@ -5,23 +5,19 @@ import MarcoArriba from '@/components/ui/MarcoArriba';
 import MarcoAbajo from '@/components/ui/MarcoAbajo';
 import EstrategiasOpciones from '@/components/programas/EstrategiasOpciones';
 import Lista from '@/components/programas/Lista';
+import MiniPortada from '@/components/ui/MiniPortada';
 
 export default function ProgramasPage() {
 	const { programas } = useProgramas();
 
 	return (
 		<>
-		{/* Hero */}
-		<div className="relative w-full h-50 md:h-70 overflow-hidden rounded-b-lg">
-			<img src="/portadas/ninas.jpg" alt="Dos niñas sonriendo" className="absolute inset-0 w-full h-full object-cover object-top" />
-			<div className="absolute inset-0 bg-linear-to-r from-[#111827]/60 via-transparent to-[#111827]/20"></div>
-			<div className="relative z-10 max-w-6xl mx-auto h-full flex items-center px-6 md:px-12">
-				<div className="text-white">
-					<h1 className="text-3xl md:text-5xl font-extrabold leading-tight">Programas y Proyectos</h1>
-					<p className="mt-3 max-w-2xl text-sm md:text-base text-white/90">Contribuimos al desarrollo territorial a través de programas y proyectos que promueven derechos, participación y sostenibilidad.</p>
-				</div>
-			</div>
-		</div>
+		<MiniPortada
+			imageSrc="/portadas/ninas.jpg"
+			imageAlt="Dos niñas sonriendo"
+			title="Programas y Proyectos"
+			description="Contribuimos al desarrollo territorial a través de programas y proyectos que promueven derechos, participación y sostenibilidad."
+		/>
 		<MarcoArriba/>
 		<section className="max-w-6xl mx-auto px-6 md:px-0 py-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
 			<div className="lg:col-span-1 space-y-6">
