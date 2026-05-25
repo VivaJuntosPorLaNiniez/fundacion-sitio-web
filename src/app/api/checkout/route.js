@@ -61,7 +61,8 @@ export async function POST(request) {
     const accessToken = auth.data.access_token;
 
     console.log('--- CREANDO ENLACE DE PAGO ---');
-    const urlRedirect = process.env.WOMPI_LINK_REDIRECT_URL || 'http://localhost:3000/donar/resultado';
+    const origin = request.nextUrl.origin;
+    const urlRedirect = process.env.WOMPI_LINK_REDIRECT_URL || `${origin}/donar/resultado`;
     const identificadorEnlaceComercio = `don-${crypto.randomUUID()}`;
 
     try {
