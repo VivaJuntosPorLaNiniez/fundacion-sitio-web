@@ -1,5 +1,14 @@
+import MiniPortada from "@/components/ui/MiniPortada";
+
 export default function SobreNosotrosPage() {
 	return (
+    <>
+		<MiniPortada
+      title="Sobre Nosotros"
+      description="Conoce más sobre nuestra misión, visión y valores institucionales."
+      imageSrc="/portadas/sobre-nos.jpg"
+      imageAlt="Portada de Sobre Nosotros"
+    />
 		<section className="px-4 py-8 sm:px-6 sm:py-10 md:px-8 md:py-12">
 		<div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:gap-10">
 			<div className="w-full space-y-3 sm:space-y-4 lg:w-2/5">
@@ -51,7 +60,7 @@ humanos, económicos, materiales e incidir en una estrategia de desarrollo sost
 			<div className="card w-full max-w-xs shadow-sm">
   <figure>
     <img
-      src=""
+      src="/aliados/logo1.png"
       alt="Shoes" />
   </figure>
   <div className="card-body">
@@ -67,7 +76,7 @@ humanos, económicos, materiales e incidir en una estrategia de desarrollo sost
 <div className="card w-full max-w-xs shadow-sm">
   <figure>
     <img
-      src=""
+      src="/aliados/logo1.png"
       alt="Shoes" />
   </figure>
   <div className="card-body">
@@ -99,5 +108,6 @@ humanos, económicos, materiales e incidir en una estrategia de desarrollo sost
 	</div>
 
 		</section>
+    </>
 	);
 }
