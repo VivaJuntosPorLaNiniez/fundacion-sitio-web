@@ -322,7 +322,6 @@ export default function DonarPage() {
 	);
 
 	// Función para manejar la finalización de la donación
-	// Dentro de src/app/donar/page.js
 const handleFinalizarDonacion = async () => {
 	setLoading(true);
 	try {
@@ -449,7 +448,7 @@ const handleFinalizarDonacion = async () => {
 										key={step.id}
 										className={`step ${index <= stepIndex ? "step-brand" : ""}`}
 									>
-										{step.label}
+										<span className="hidden md:inline">{step.label}</span>
 									</li>
 								))}
 							</ul>

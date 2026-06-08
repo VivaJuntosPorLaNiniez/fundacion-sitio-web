@@ -10,9 +10,9 @@ export default function ListaDeslizante({ programas = [] }) {
                     programasActivos.map((programa, index) => (
                         <div
                             key={programa.id ?? `${programa.nombre}-${index}`}
-                            className="card card-side mx-0 bg-white shadow-xl border border-slate-100 overflow-hidden"
+                            className="card mx-0 bg-white shadow-xl border border-slate-100 overflow-hidden md:card-side"
                         >
-                            <figure className="w-80 shrink-0 bg-slate-100">
+                            <figure className="w-full h-48 md:w-80 md:h-auto shrink-0 bg-slate-100">
                                 <img
                                     src={programa.img_portada}
                                     alt={programa.nombre ?? 'Imagen de proyecto'}
