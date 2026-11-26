@@ -12,10 +12,11 @@ export default function Footer() {
                 </nav>
                 <nav>
                     <h6 className="footer-title">Fundación Viva Juntos por la Niñez</h6>
-                    <a className="link link-hover" href="/quienes-somos/sobre-nosotros">Sobre nosotros</a>
-                    <a className="link link-hover" href="/quienes-somos/historia">Historia</a>
-                    <a className="link link-hover" href="/transparencia">Transparencia</a>
-                    <a className="link link-hover" href="/donar">Donar</a>
+                    <a className="link link-hover" href="/sobre-nosotros/historia">Nuestra Historia</a>
+                    <a className="link link-hover" href="/sobre-nosotros/salvaguardia">Salvaguardia</a>
+                    <a className="link link-hover" href="/que-hacemos">Qué hacemos</a>
+                    <a className="link link-hover" href="/nuestro-impacto">Nuestro impacto</a>
+                    <a className="link link-hover" href="/unete">Únete</a>
                 </nav>
                 <nav>
                     <h6 className="footer-title">Legal</h6>
@@ -34,6 +35,22 @@ export default function Footer() {
                         <path d="M22.675 0h-21.35C.597 0 0 .597 0 1.333v21.334C0 23.403.597 24 1.325 24H12.82v-9.294H9.692V11.01h3.127V8.414c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.099 2.797.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.313h3.587l-.467 3.696h-3.12V24h6.116C23.403 24 24 23.403 24 22.667V1.333C24 .597 23.403 0 22.675 0z" />
                         </svg>
                         <a className="link link-hover" href="https://www.facebook.com/profile.php?id=100064343365708" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    </div>
+                    <div className="grid grid-flow-col gap-2">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        className="fill-none stroke-current"
+                        strokeWidth="1.7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true">
+                        <path d="M20 11.5a8.5 8.5 0 0 1-12.6 7.4L4 20l1.1-3.4A8.5 8.5 0 1 1 20 11.5Z" />
+                        <path d="M8.5 8.2c.2-.4.4-.5.7-.5h.5c.2 0 .3.1.4.3l.7 1.5c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.4-.1.6.4.8 1.1 1.4 1.8 1.8.2.1.4.1.6-.1l.6-.5c.2-.2.4-.2.6-.1l1.5.7c.2.1.3.2.3.4v.5c0 .3-.1.5-.5.7-.5.3-1 .4-1.5.3-1.4-.2-2.7-1-3.8-2.1-1.1-1.1-1.9-2.4-2.1-3.8-.1-.5 0-1 .3-1.5Z" />
+                        </svg>
+                        <a className="link link-hover" href="https://wa.me/76332758" target="_blank" rel="noopener noreferrer">WhatsApp</a>
                     </div>
                     <div className="grid grid-flow-col gap-2 items-center">
                         <svg

@@ -4,10 +4,10 @@ import { ChevronDown, HeartHandshake, Menu } from "lucide-react";
 
 const primarySections = [
     {
-        label: "¿Quiénes somos?",
+        label: "Sobre nosotros",
         items: [
-            { label: "Historia", href: "/quienes-somos/historia" },
-            { label: "Sobre nosotros", href: "/quienes-somos/sobre-nosotros" },
+            { label: "Nuestra Historia", href: "/sobre-nosotros/historia" },
+            { label: "Salvaguardia", href: "/sobre-nosotros/salvaguardia" },
         ],
     },
 ];
@@ -37,7 +37,7 @@ export default function Navbar() {
                                 <li>
                                     <details>
                                         <summary className="rounded-2xl px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-[#f5ec3f] hover:text-slate-950">
-                                            ¿Quiénes somos?
+                                            Sobre nosotros
                                         </summary>
                                         <ul className="mt-2 space-y-1 pl-2">
                                             {primarySections[0].items.map((item) => (
@@ -51,22 +51,22 @@ export default function Navbar() {
                                     </details>
                                 </li>
                                 <li>
-                                    <Link className={menuItemClass} href="/programas-y-proyectos">
-                                        Programas y proyectos
+                                    <Link className={menuItemClass} href="/que-hacemos">
+                                        ¿Qué hacemos?
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link className={menuItemClass} href="/transparencia">
-                                        Transparencia
+                                    <Link className={menuItemClass} href="/nuestro-impacto">
+                                        Nuestro impacto
                                     </Link>
                                 </li>
                                 <li className="pt-2">
                                     <Link
                                         className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#f5ec3f] px-4 py-3 text-sm font-semibold text-slate-950 shadow-[0_10px_24px_rgba(245,236,63,0.35)] transition hover:-translate-y-0.5 hover:bg-[#ebe03f]"
-                                        href="/donar"
+                                        href="/unete"
                                     >
                                         <HeartHandshake className="h-4 w-4" aria-hidden="true" />
-                                        Donar
+                                        ¡Únete!
                                     </Link>
                                 </li>
                             </ul>
@@ -86,7 +86,7 @@ export default function Navbar() {
                                     Fundación Viva
                                 </p>
                                 <p className="text-sm font-semibold text-slate-900">
-                                    Juntos por la Niñez
+                                    Juntos por la Niñez El Salvador
                                 </p>
                             </div>
                         </Link>
@@ -120,17 +120,17 @@ export default function Navbar() {
                             <li>
                                 <Link
                                     className="inline-flex items-center rounded-full px-4 py-2.5 text-[0.95rem] font-semibold text-slate-800 transition duration-200 hover:bg-[#f5ec3f] hover:text-slate-950"
-                                    href="/programas-y-proyectos"
+                                    href="/que-hacemos"
                                 >
-                                    Programas y proyectos
+                                    ¿Qué hacemos?
                                 </Link>
                             </li>
                             <li>
                                 <Link
                                     className="inline-flex items-center rounded-full px-4 py-2.5 text-[0.95rem] font-semibold text-slate-800 transition duration-200 hover:bg-[#f5ec3f] hover:text-slate-950"
-                                    href="/transparencia"
+                                    href="/nuestro-impacto"
                                 >
-                                    Transparencia
+                                    Nuestro impacto
                                 </Link>
                             </li>
                         </ul>
@@ -139,10 +139,10 @@ export default function Navbar() {
                     <div className="navbar-end gap-3">
                         <Link
                             className="inline-flex h-11 min-h-0 items-center gap-2 rounded-full border-0 bg-[#f5ec3f] px-5 py-2 text-sm font-semibold text-slate-950 shadow-[0_8px_0_#c6ba18,0_14px_24px_rgba(0,0,0,0.12)] transition-transform duration-200 hover:-translate-y-0.5 hover:bg-[#f5ec3f]"
-                            href="/donar"
+                            href="/unete"
                         >
                             <HeartHandshake className="h-4 w-4" aria-hidden="true" />
-                            Donar
+                            ¡Únete!
                         </Link>
                     </div>
                 </div>

@@ -1,10 +1,10 @@
 # Página Web de Viva Juntos Por La Niñez
 
-Este proyecto consiste en el desarrollo de una plataforma web moderna para la presentación, gestión y recepción de donaciones para la Fundación Viva Juntos Por La Niñez, realizada como parte de la pasantía de estudiantes de la Universidad Don Bosco (UDB).
+Este proyecto consiste en el desarrollo de un sitio web informativo para la Fundación Viva Juntos Por La Niñez, realizado como parte de la pasantía de estudiantes de la Universidad Don Bosco (UDB).
 
 ## 🚀 Propósito del Proyecto
 
-El objetivo es facilitar la información y noticias de la fundación, así como el proceso de donaciones, brindando transparencia y accesibilidad a los donantes, y herramientas de gestión eficiente para la fundación.
+El objetivo es presentar información sobre la fundación, su historia, programas y trabajo comunitario de forma accesible.
 
 ## 🛠️ Stack Tecnológico
 
@@ -12,8 +12,7 @@ Este proyecto se ha construido utilizando las siguientes herramientas (basado en
 
 * **Frontend:** [React (Next.js)](https://nextjs.org/)
 * **Estilos:** [Tailwind CSS](https://tailwindcss.com/) + [DaisyUI](https://daisyui.com/)
-* **Backend:** [Node.js (Express)](https://expressjs.com/)
-* **Base de Datos:** [Supabase (PostgreSQL)](https://supabase.com/)
+* **Contenido:** páginas y datos estáticos del proyecto
 * **Hosting:** Netlify (Pruebas) / Hostinger (Producción)
 
 ---
@@ -36,21 +35,20 @@ Para ejecutar este proyecto localmente, necesitarás tener instalado:
     ```
 2.  **Instalar dependencias:**
     ```bash
-    npm install
+    pnpm install
     # o si usas yarn:
     # yarn install
     ```
-3.  **Configurar Variables de Entorno:**
-    * Copia el archivo `.env.example` y renombralo a `.env`.
-    * 🚧 **Importante:** Solicita al administrador del proyecto las credenciales de Supabase y otras API Keys para llenar este archivo. **Nunca subas este archivo `.env` al repositorio.**
-4.  **Iniciar el servidor de desarrollo:**
+3.  **Iniciar el servidor de desarrollo:**
     ```bash
-    npm run dev
+    pnpm run dev
     # o si usas yarn:
     # yarn dev
     ```
-5.  **Abrir en el navegador:**
+4.  **Abrir en el navegador:**
     Visita [http://localhost:3000](http://localhost:3000) para ver el proyecto en ejecución.
+
+El contenido ilustrativo de testimonios se encuentra en `src/data/testimonios.js` y puede actualizarse directamente en ese archivo.
 
 ---
 
